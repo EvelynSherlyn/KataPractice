@@ -3,10 +3,11 @@ public class Kata
 {
 
     public static int sum(int[] numbers) {
+        //Inicializando el resultado y donde se pondrán los números
         int resultado = 0;
-        int maximo = 0;
-        int min = numbers[0];
-        if (numbers==null) {
+        int maximo = numbers[0]; int min = numbers[0];
+        //--------------------------------------
+        if (numbers.length==1 || numbers==null) {
             return 0;
         }
         for (int num: numbers) {
@@ -18,9 +19,7 @@ public class Kata
             }
             resultado +=num;
         }
-        int resta = min+maximo;
-        resultado = resultado-resta;
+        resultado -= min+maximo;
         return resultado;
-
     }
 }
